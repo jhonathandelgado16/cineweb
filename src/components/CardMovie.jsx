@@ -1,24 +1,29 @@
 import React from 'react';
+import Button from './Button';
+import ContentRating from './ContentRating';
 
-const CardMovie = () => {
+const CardMovie = ({
+  title = 'INTERSTELAR',
+  imgSrc = '/images/poster.jpg',
+  rating = '18',
+  buttonText = 'Ingressos',
+}) => {
   return (
-    <div className="h-[380px] w-[230px] m-4 shadow-lg">
-      <div className="h-[300px] bg-gray-700 rounded-t-lg">
+    <div className="h-90 xl:w-[230px] w-80 xl:m-4 m-2 shadow-lg hover:outline-2 hover:outline-offset-2 hover:outline-gray-200 rounded-lg">
+      <div className="h-3/4 w-full bg-gray-700 rounded-t-lg">
         <img
-          className="h-[300px] w-full rounded-t-lg"
-          src="/images/poster.jpg"
-          alt=""
+          className="h-full w-full rounded-t-lg object-cover"
+          src={imgSrc}
+          alt={title}
         />
       </div>
-      <div className="h-[90px] bg-gray-800 rounded-b-lg flex-row items-center justify-center p-2">
-        <div className="text-white w-full text-lg">INTERSTELAR</div>
-        <div className="w-full flex justify-between items-center">
-          <div className="bg-black text-white p-1 w-[30px] h-[30px] text-center text-sm">
-            18
-          </div>
-          <button className="bg-[#d00000] p-2 rounded-lg text-white text-sm">
-            Ingressos
-          </button>
+      <div className="h-1/4 bg-gray-900 rounded-b-lg flex flex-col justify-center p-2">
+        <div className="text-white w-full text-lg truncate font-semibold">
+          {title}
+        </div>
+        <div className="w-full flex justify-between items-center mt-2">
+          <ContentRating contentRating={rating} />
+          <Button textButton={buttonText} />
         </div>
       </div>
     </div>

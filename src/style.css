@@ -1,6 +1,32 @@
 @import "tailwindcss";
+@tailwind components;
+@tailwind utilities;
 
 body {
   font-family: 'Sora', sans-serif;
 }
+
+button {
+  cursor: pointer;
+}
+
+  /* Custom Scrollbar Styling (WebKit only) */
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 8px; /* width of the entire scrollbar */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: none; /* color of the track */
+    border-radius: 10px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #d00; /* color of the scroll thumb */
+    border-radius: 10px;
+    opacity: 0.5; /* make the thumb semi-transparent */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    opacity: 0.9; /* color of the scroll thumb on hover */
+  }
 
