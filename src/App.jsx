@@ -1,6 +1,7 @@
 import React from 'react';
 import CardMovie from './components/CardMovie';
 import Carousel from './components/Carousel';
+import Section from './components/Section';
 
 const movies = [
   { title: 'INTERSTELAR', img: '/images/poster.jpg', rating: '18' },
@@ -13,19 +14,9 @@ const movies = [
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-[#131313] flex items-center justify-center p-8">
-      <div className="w-full max-w-6xl">
-        <Carousel>
-          {movies.map((m, i) => (
-            <CardMovie
-              key={i}
-              title={m.title}
-              imgSrc={m.img}
-              rating={m.rating}
-            />
-          ))}
-        </Carousel>
-      </div>
+    <div className="min-h-screen bg-[#131313] flex-row items-center justify-center p-8">
+      <Section title="Em Cartaz" movies={movies} />
+      <Section title="Em Breve" movies={movies} />
     </div>
   );
 };
