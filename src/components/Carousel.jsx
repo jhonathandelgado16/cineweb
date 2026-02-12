@@ -22,7 +22,7 @@ const Carousel = ({ children }) => {
 
       <div
         ref={containerRef}
-        className="flex overflow-x-auto scroll-smooth py-4 px-2 custom-scrollbar"
+        className="flex overflow-x-auto scroll-smooth py-4 px-2 md:scrollbar-hide custom-scrollbar"
       >
         {React.Children.map(children, (child, idx) => (
           <div className="flex-shrink-0" key={idx}>
