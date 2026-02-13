@@ -14,7 +14,7 @@ const movies = [
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-[#131313] flex-row items-center justify-center p-8">
+    <div className="h-full bg-[#131313] flex-row items-center justify-center p-8">
       <Section title="Em Cartaz" movies={movies} />
       <Section title="Em Breve" movies={movies} />
     </div>

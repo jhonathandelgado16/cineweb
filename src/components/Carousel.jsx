@@ -11,7 +11,7 @@ const Carousel = ({ children }) => {
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-full h-full">
       <button
         onClick={() => scroll(-1)}
         aria-label="previous"
@@ -22,10 +22,10 @@ const Carousel = ({ children }) => {
 
       <div
         ref={containerRef}
-        className="flex overflow-x-auto scroll-smooth py-4 px-2 md:scrollbar-hide custom-scrollbar"
+        className="flex overflow-x-auto scroll-smooth py-4 px-4 md:scrollbar-hide custom-scrollbar h-full"
       >
         {React.Children.map(children, (child, idx) => (
-          <div className="flex-shrink-0" key={idx}>
+          <div className="flex-shrink-0 p-2" key={idx}>
             {child}
           </div>
         ))}
