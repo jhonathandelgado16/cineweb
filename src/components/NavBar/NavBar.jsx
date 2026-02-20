@@ -3,11 +3,11 @@ import LinkBar from './LinkBar';
 
 const NavBar = () => {
   return (
-    <div className="flex-col lg:grid lg:grid-cols-6 items-center justify-center h-35 bg-[#131313] text-white px-8 py-4">
-      <div className="flex lg:col-start-2 lg:col-span-4 justify-between h-15 mb-4">
+    <div className="flex-col w-full max-w-6xl items-center justify-center h-35 bg-[#131313] text-white py-4 mx-auto">
+      <div className="flex justify-center md:justify-between lg:justify-between xl:justify-between h-15 mb-4 px-2">
         <img className="object-contain" src={'/assets/logo.png'} alt={'Home'} />
       </div>
-      <div className="flex lg:col-start-2 lg:col-span-4 justify-between h-full">
+      <div className="flex justify-between">
         <LinkBar />
       </div>
     </div>

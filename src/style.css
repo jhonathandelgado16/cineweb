@@ -2,6 +2,7 @@
 @import 'tailwind-scrollbar-hide/v4';
 
 body {
+  background-color: #131313;
   font-family: 'Sora', sans-serif;
 }
 

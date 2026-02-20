@@ -10,10 +10,12 @@ const Card = (props) => {
           src={props.img}
           alt={props.title}
         />
-        <div className="absolute flex justify-between text-white font-bold text-[60px] inset-x-0 bottom-0 bg-gradient-to-t from-[#131313]/100 to-transparent pb-10 px-6">
-          <div>{props.title}</div>
-          <div>
-            <Button textButton="COMPRAR INGRESSOS" />
+        <div className="absolute flex-row text-white font-bold inset-x-0 bottom-0 bg-gradient-to-t from-[#131313]/100 to-transparent pb-12 px-2 md:px-6 xl:px-6 lg:px-6">
+          <div className="p-0 text-shadow-lg text-2xl md:text-[60px] lg:text-[60px] xl:text-[60px]">
+            {props.title}
+          </div>
+          <div className="p-0">
+            <Button textButton="INGRESSOS" />
           </div>
         </div>
       </div>
