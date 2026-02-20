@@ -6,7 +6,7 @@ const Section = (props) => {
   return (
     <div className="flex-row h-140 w-full">
       <div className="h-1/10 flex justify-center pt-4 px-4">
-        <div className="flex text-2xl text-white font-extrabold w-full max-w-6xl ">
+        <div className="flex text-2xl text-white font-bold w-full max-w-6xl ">
           <div className="w-auto">{props.title}</div>
         </div>
       </div>

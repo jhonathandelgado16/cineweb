@@ -9,12 +9,12 @@ const BigCarousel = ({ children }) => {
   const scroll = (dir = 1) => {
     const newIndex = (currentIndex + dir + itemCount) % itemCount;
     setCurrentIndex(newIndex);
-    setIsAutoPlay(false);
+    //setIsAutoPlay(false);
   };
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
-    setIsAutoPlay(false);
+    //setIsAutoPlay(false);
   };
 
   useEffect(() => {
@@ -30,13 +30,9 @@ const BigCarousel = ({ children }) => {
   if (itemCount === 0) return null;
 
   return (
-    <div className="relative w-full max-w-6xl h-96 overflow-hidden mx-auto">
+    <div className="relative w-full max-w-6xl h-96 overflow-hidden mx-auto mb-6">
       <div className="flex h-full">
-        {/* Right section - Featured image with angled background */}
         <div className="w-full lg:w-full relative flex items-center justify-end overflow-hidden">
-          {/* Angled overlay */}
-          <div className="absolute inset-0"></div>
-
           {/* Carousel images */}
           <div className="absolute inset-0 flex items-center justify-center">
             {itemsArray.map((item, index) => (
@@ -61,7 +57,7 @@ const BigCarousel = ({ children }) => {
         onMouseEnter={() => setIsAutoPlay(false)}
         onMouseLeave={() => setIsAutoPlay(true)}
         aria-label="previous"
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 bg-gray-900 transition-all duration-300 opacity-70 text-white p-2 rounded-full hover:opacity-100 hover:scale-110 text-2xl font-bold hover:bg-gray-800"
+        className="h-8 absolute left-0 bottom-0 z-20 bg-gray-900 transition-all duration-300 opacity-70 text-white px-2 rounded-md hover:opacity-100 text-2xl font-bold hover:bg-gray-800"
       >
         ‹
       </button>
@@ -71,13 +67,13 @@ const BigCarousel = ({ children }) => {
         onMouseEnter={() => setIsAutoPlay(false)}
         onMouseLeave={() => setIsAutoPlay(true)}
         aria-label="next"
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 bg-gray-900 transition-all duration-300 opacity-70 text-white p-2 rounded-full hover:opacity-100 hover:scale-110 text-2xl font-bold hover:bg-gray-800"
+        className="h-8 absolute right-0 bottom-0 z-20 bg-gray-900 transition-all duration-300 opacity-70 text-white px-2 rounded-md hover:opacity-100 text-2xl font-bold hover:bg-gray-800"
       >
         ›
       </button>
 
       {/* Dot Indicators */}
-      <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+      <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
         {itemsArray.map((_, index) => (
           <button
             key={index}

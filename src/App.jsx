@@ -20,20 +20,23 @@ const bigMovies = [
   { title: 'INTERESTELAR', img: '/images/bigcarousel/1.jpg' },
   { title: 'INCEPTION', img: '/images/bigcarousel/2.webp' },
   { title: 'DUNE', img: '/images/bigcarousel/3.jpg' },
+  { title: 'INTERESTELAR', img: '/images/bigcarousel/1.jpg' },
+  { title: 'INCEPTION', img: '/images/bigcarousel/2.webp' },
+  { title: 'DUNE', img: '/images/bigcarousel/3.jpg' },
 ];
 
 const App = () => {
   return (
     <>
       <NavBar />
-      <div className="h-full bg-[#131313] flex-row items-center justify-center p-8 mx-auto">
+      <div className="h-full bg-[#131313] flex-row items-center justify-center p-4 mx-auto">
         <BigCarousel>
           {bigMovies.map((m) => (
             <Card key={m.title} title={m.title} img={m.img} />
           ))}
         </BigCarousel>
-        <Section title="Em Cartaz" movies={movies} />
-        <Section title="Em Breve" movies={movies} />
+        <Section title="EM CARTAZ" movies={movies} />
+        <Section title="EM BREVE" movies={movies} />
       </div>
     </>
   );
