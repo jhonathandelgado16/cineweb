@@ -3,11 +3,11 @@ import React from 'react';
 const ContentRating = (props) => {
   const contentRatingColors = {
     10: 'bg-[#005096]',
-    12: 'bg-[#ffd700]',
+    12: 'bg-[#d4b200]',
     14: 'bg-[#FF8C00]',
     16: 'bg-[#FF0000]',
     18: 'bg-[#000000]',
-    L: 'bg-[#00FF00]',
+    L: 'bg-[#227338]',
   };
 
   return (
