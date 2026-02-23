@@ -3,7 +3,7 @@ import LinkButton from './LinkButton';
 
 const LinkBar = () => {
   return (
-    <div className="justify-center gap-4 flex-wrap flex">
+    <div className="justify-center gap-2 md:gap-4 flex flex-col md:flex-row p-4 md:p-0">
       <LinkButton textLink={'PROGRAMAÇÃO'} path="filme" />
       <LinkButton textLink={'CARDÁPIO'} />
       <LinkButton textLink={'CINEMAS'} />

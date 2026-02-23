@@ -6,7 +6,7 @@ const Carousel = ({ children }) => {
   const scroll = (dir = 1) => {
     const el = containerRef.current;
     if (!el) return;
-    const amount = Math.floor(el.clientWidth * 0.8);
+    const amount = Math.floor(el.clientWidth * 0.94);
     el.scrollBy({ left: dir * amount, behavior: 'smooth' });
   };
 
@@ -22,11 +22,11 @@ const Carousel = ({ children }) => {
 
       <div
         ref={containerRef}
-        className="flex overflow-x-auto scroll-smooth p-2 md:scrollbar-hide custom-scrollbar h-full"
+        className="flex overflow-x-auto scroll-smooth p-2 scrollbar-hide custom-scrollbar h-full"
       >
         {React.Children.map(children, (child, idx) => (
           <div
-            className="flex-shrink-0 p-4 md:p-2 lg:p-2 xl:p-2 w-full lg:w-1/5"
+            className="flex-shrink-0 p-4 md:p-2 lg:p-2 xl:p-2 w-[90vw] md:w-full lg:w-1/5"
             key={idx}
           >
             {child}
