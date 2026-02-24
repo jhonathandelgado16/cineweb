@@ -9,7 +9,7 @@ const CardMovie = ({
   buttonText = 'Ingressos',
 }) => {
   return (
-    <div className="h-full w-8/10 md:w-full mx-auto shadow-lg hover:outline-2 hover:outline-offset-2 hover:outline-gray-200 rounded-lg cursor-pointer">
+    <div className="h-full w-7/10 md:w-full mx-auto shadow-lg hover:outline-2 hover:outline-offset-2 hover:outline-gray-200 rounded-lg cursor-pointer">
       <div className="h-3/4 bg-gray-700 rounded-t-lg">
         <img
           className="h-full w-full rounded-t-lg object-cover"
