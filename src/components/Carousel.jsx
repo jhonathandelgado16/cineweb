@@ -26,7 +26,7 @@ const Carousel = ({ children }) => {
       >
         {React.Children.map(children, (child, idx) => (
           <div
-            className="flex-shrink-0 p-4 md:p-2 lg:p-2 xl:p-2 w-[90vw] md:w-full lg:w-1/5"
+            className="flex-shrink-0 p-4 md:p-2 lg:p-2 xl:p-2 w-[90vw] sm:w-1/2 md:w-1/3 lg:w-1/5"
             key={idx}
           >
             {child}

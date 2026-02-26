@@ -2,6 +2,7 @@ import React from 'react';
 import NavBar from './components/NavBar/NavBar';
 import HeaderMovie from './components/Movie/HeaderMovie';
 import Section from './components/Section';
+import MovieSection from './components/MovieSection/MovieSection';
 
 const movies = [
   { title: 'INTERESTELAR', img: '/images/poster.jpg', rating: '18' },
@@ -16,6 +17,7 @@ const Movie = () => {
   return (
     <>
       <HeaderMovie title="INTERESTELAR" img="/images/bigcarousel/1.jpg" />
+      <MovieSection />
       <Section title="EM CARTAZ" movies={movies} />
     </>
   );

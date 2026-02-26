@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import ContentRating from './ContentRating';
+import { useNavigate } from 'react-router-dom';
 
 const CardMovie = ({
   title = 'INTERSTELAR',
@@ -8,8 +9,17 @@ const CardMovie = ({
   rating = '18',
   buttonText = 'Ingressos',
 }) => {
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/filme'); // Redirects to a new route
+  };
+
   return (
-    <div className="h-full w-7/10 md:w-full mx-auto shadow-lg hover:outline-2 hover:outline-offset-2 hover:outline-gray-200 rounded-lg cursor-pointer">
+    <div
+      className="h-full w-7/10 md:w-full mx-auto shadow-lg hover:outline-2 hover:outline-offset-2 hover:outline-gray-200 rounded-lg cursor-pointer"
+      onClick={handleClick}
+    >
       <div className="h-3/4 bg-gray-700 rounded-t-lg">
         <img
           className="h-full w-full rounded-t-lg object-cover"
