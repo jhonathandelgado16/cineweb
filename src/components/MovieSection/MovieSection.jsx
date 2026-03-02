@@ -1,18 +1,89 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../Button';
 import ButtonSection from './ButtonSection';
 
 const MovieSection = () => {
+  const sessoes = [
+    {
+      sala: 'SALA 5',
+      sessao: '16:00',
+      tipoVideo: '2D LEGENDADO',
+      diaSemana: 'QUINTA',
+      data: '26/Fev',
+      filme: 'Nome do Filme',
+    },
+    {
+      sala: 'SALA 5',
+      sessao: '19:00',
+      tipoVideo: '2D LEGENDADO',
+      diaSemana: 'QUINTA',
+      data: '26/Fev',
+      filme: 'Nome do Filme',
+    },
+    {
+      sala: 'SALA 5',
+      sessao: '16:00',
+      tipoVideo: '3D DUBLADO',
+      diaSemana: 'QUINTA',
+      data: '26/Fev',
+      filme: 'Nome do Filme',
+    },
+    {
+      sala: 'SALA 5',
+      sessao: '19:00',
+      tipoVideo: '2D LEGENDADO',
+      diaSemana: 'SEXTA',
+      data: '27/Fev',
+      filme: 'Nome do Filme',
+    },
+    {
+      sala: 'SALA 5',
+      sessao: '16:00',
+      tipoVideo: '2D LEGENDADO',
+      diaSemana: 'SEXTA',
+      data: '27/Fev',
+      filme: 'Nome do Filme',
+    },
+    {
+      sala: 'SALA 2',
+      sessao: '16:00',
+      tipoVideo: '2D DUBLADO',
+      diaSemana: 'SÁBADO',
+      data: '28/Fev',
+      filme: 'Nome do Filme',
+    },
+    {
+      sala: 'SALA 2',
+      sessao: '19:00',
+      tipoVideo: '3D DUBLADO',
+      diaSemana: 'SÁBADO',
+      data: '28/Fev',
+      filme: 'Nome do Filme',
+    },
+  ];
+
+  const [selectedDay, setSelectedDay] = useState('QUINTA');
+
+  var sessoesAgrupadas = Object.groupBy(sessoes, (item) => item.diaSemana);
+
   return (
     <div className="h-140 flex-row items-center justify-center px-4 mx-auto">
       <div className="w-full max-w-6xl mx-auto mb-2 md:mb-6 bg-[#131313]/80 p-4 rounded-lg h-full text-white">
         <div className="h-1/4">
           <div className="font-extrabold pb-2 text-xl">Sessões</div>
           <div className="flex overflow-x-auto scroll-smooth scrollbar-hide">
-            <ButtonSection dayOfWeek="QUINTA" day="26/Fev" selected={true} />
-            <ButtonSection dayOfWeek="SEXTA" day="27/Fev" />
-            <ButtonSection dayOfWeek="SÁBADO" day="28/Fev" />
-            <ButtonSection dayOfWeek="DOMINGO" day="29/Fev" />
+            {Object.keys(sessoesAgrupadas).map((diaSemana) => {
+              const sessoesDoDia = sessoesAgrupadas[diaSemana];
+              return (
+                <ButtonSection
+                  key={diaSemana}
+                  dayOfWeek={diaSemana}
+                  day={sessoesDoDia[0].data}
+                  selected={selectedDay}
+                  alterSelected={setSelectedDay}
+                />
+              );
+            })}
           </div>
         </div>
         <div className="flex-col h-3/4 overflow-y-auto scroll-smooth p-2 custom-scrollbar">

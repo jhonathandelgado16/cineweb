@@ -1,16 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const ButtonSection = ({
   selected = false,
   dayOfWeek = 'SEGUNDA',
   day = '26/Fev',
+  alterSelected,
 }) => {
-  const [color, setColor] = useState(
-    selected ? 'bg-[#080808] border-[#d00]' : 'bg-[#131313] border-[#7a7a7a]',
-  );
+  const [color, setColor] = useState('bg-[#131313] border-[#7a7a7a]');
+  const [selectedDay, setSelectedDay] = useState(selected);
+
+  useEffect(() => {
+    if (selectedDay == dayOfWeek) {
+      setColor('bg-[#080808] border-[#d00]');
+    } else {
+      setColor('bg-[#131313] border-[#7a7a7a]');
+    }
+  }, [selected, color]);
 
   const handleClick = () => {
-    if (color === 'bg-[#131313] border-[#7a7a7a]') {
+    alterSelected(dayOfWeek);
+    if (selectedDay == dayOfWeek) {
       setColor('bg-[#080808] border-[#d00]');
     } else {
       setColor('bg-[#131313] border-[#7a7a7a]');
