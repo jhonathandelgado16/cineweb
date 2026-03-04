@@ -2,63 +2,70 @@ import React, { useState } from 'react';
 import Button from '../Button';
 import ButtonSection from './ButtonSection';
 
-const MovieSection = () => {
+const MovieSection = (props) => {
   const sessoes = [
     {
       sala: 'SALA 5',
       sessao: '16:00',
-      tipoVideo: '2D LEGENDADO',
+      categoriasVideo: { video: ['2D'], audio: ['LEGENDADO'] },
       diaSemana: 'QUINTA',
       data: '26/Fev',
       filme: 'Nome do Filme',
+      link: 'https://veloxtickets.com',
     },
     {
       sala: 'SALA 5',
       sessao: '19:00',
-      tipoVideo: '2D LEGENDADO',
+      categoriasVideo: { video: ['2D'], audio: ['LEGENDADO'] },
       diaSemana: 'QUINTA',
       data: '26/Fev',
       filme: 'Nome do Filme',
-    },
-    {
-      sala: 'SALA 5',
-      sessao: '16:00',
-      tipoVideo: '3D DUBLADO',
-      diaSemana: 'QUINTA',
-      data: '26/Fev',
-      filme: 'Nome do Filme',
-    },
-    {
-      sala: 'SALA 5',
-      sessao: '19:00',
-      tipoVideo: '2D LEGENDADO',
-      diaSemana: 'SEXTA',
-      data: '27/Fev',
-      filme: 'Nome do Filme',
-    },
-    {
-      sala: 'SALA 5',
-      sessao: '16:00',
-      tipoVideo: '2D LEGENDADO',
-      diaSemana: 'SEXTA',
-      data: '27/Fev',
-      filme: 'Nome do Filme',
+      link: 'https://veloxtickets.com',
     },
     {
       sala: 'SALA 2',
       sessao: '16:00',
-      tipoVideo: '2D DUBLADO',
-      diaSemana: 'SÁBADO',
-      data: '28/Fev',
+      categoriasVideo: { video: ['3D'], audio: ['DUBLADO'] },
+      diaSemana: 'QUINTA',
+      data: '26/Fev',
       filme: 'Nome do Filme',
+      link: 'https://veloxtickets.com',
+    },
+    {
+      sala: 'SALA 5',
+      sessao: '19:00',
+      categoriasVideo: { video: ['2D'], audio: ['LEGENDADO'] },
+      diaSemana: 'SEXTA',
+      data: '27/Fev',
+      filme: 'Nome do Filme',
+      link: 'https://veloxtickets.com',
+    },
+    {
+      sala: 'SALA 5',
+      sessao: '16:00',
+      categoriasVideo: { video: ['2D'], audio: ['LEGENDADO'] },
+      diaSemana: 'SEXTA',
+      data: '27/Fev',
+      filme: 'Nome do Filme',
+      link: 'https://veloxtickets.com',
     },
     {
       sala: 'SALA 2',
-      sessao: '19:00',
-      tipoVideo: '3D DUBLADO',
+      sessao: '16:00',
+      categoriasVideo: { video: ['2D'], audio: ['DUBLADO'] },
       diaSemana: 'SÁBADO',
       data: '28/Fev',
       filme: 'Nome do Filme',
+      link: 'https://veloxtickets.com',
+    },
+    {
+      sala: 'SALA 3',
+      sessao: '19:00',
+      categoriasVideo: { video: ['3D'], audio: ['DUBLADO'] },
+      diaSemana: 'SÁBADO',
+      data: '28/Fev',
+      filme: 'Nome do Filme',
+      link: 'https://veloxtickets.com',
     },
   ];
 
@@ -67,9 +74,12 @@ const MovieSection = () => {
   var sessoesAgrupadas = Object.groupBy(sessoes, (item) => item.diaSemana);
 
   return (
-    <div className="h-140 flex-row items-center justify-center px-4 mx-auto">
-      <div className="w-full max-w-6xl mx-auto mb-2 md:mb-6 bg-[#131313]/80 p-4 rounded-lg h-full text-white">
-        <div className="h-1/4">
+    <div
+      ref={props.ref}
+      className="md:h-140 flex-row items-center justify-center px-4 mx-auto"
+    >
+      <div className="w-full max-w-6xl mx-auto mb-2 md:mb-6 bg-[#0d0d0d]/90 p-4 rounded-lg h-full text-white">
+        <div className="h-1/5">
           <div className="font-extrabold pb-2 text-xl">Sessões</div>
           <div className="flex overflow-x-auto scroll-smooth scrollbar-hide">
             {Object.keys(sessoesAgrupadas).map((diaSemana) => {
@@ -79,59 +89,73 @@ const MovieSection = () => {
                   key={diaSemana}
                   dayOfWeek={diaSemana}
                   day={sessoesDoDia[0].data}
-                  selected={selectedDay}
+                  selected={selectedDay == diaSemana}
                   alterSelected={setSelectedDay}
+                  selectedButton={selectedDay}
                 />
               );
             })}
           </div>
         </div>
-        <div className="flex-col h-3/4 overflow-y-auto scroll-smooth p-2 custom-scrollbar">
-          <div className="font-bold py-2">Quinta-feira, 26 de fevereiro</div>
-          <div className="flex-col mb-2">
-            <div className="flex gap-2 text-sm text-[#b8b8b8] py-2">
-              <div className="">2D</div>
-              <div className="">LEGENDADO</div>
-              <div className="">SALA 5</div>
-            </div>
-            <div className="flex-row flex gap-2">
-              <a
-                href="https://cinexv.com.br"
-                target="_blank"
-                className="flex-col flex justify-center items-center h-1/4 w-1/3 md:w-1/8 bg-[#080808] rounded-lg hover:bg-[#6b6b6b] p-2"
-              >
-                <div className="text-lg font-bold">Quinta</div>
-                <div className="">16:00</div>
-              </a>
-              <div className="flex-col flex justify-center items-center h-1/4 w-1/3 md:w-1/8 bg-[#080808] rounded-lg hover:bg-[#6b6b6b] p-2">
-                <div className="text-lg font-bold">Quinta</div>
-                <div className="">19:00</div>
-              </div>
-            </div>
-          </div>
-          <div className="flex-col mb-2">
-            <div className="flex gap-2 text-sm text-[#b8b8b8] py-2">
-              <div className="">2D</div>
-              <div className="">DUBLADO</div>
-              <div className="">SALA 2</div>
-            </div>
-            <div className="flex-col p-2 flex justify-center items-center h-1/4 w-1/3 md:w-1/8 bg-[#080808] rounded-lg hover:bg-[#6b6b6b]">
-              <div className="text-lg font-bold">Quinta</div>
-              <div className="">21:00</div>
-            </div>
+        <div className="flex-col h-4/5 overflow-y-auto scroll-smooth p-2 custom-scrollbar">
+          <div className="font-bold py-1">
+            {'Sessões de '}
+            {sessoesAgrupadas[selectedDay][0].diaSemana}
+            {', '}
+            {sessoesAgrupadas[selectedDay][0].data}
           </div>
 
-          <div className="flex-col mb-2">
-            <div className="flex gap-2 text-sm text-[#b8b8b8] py-2">
-              <div className="">2D</div>
-              <div className="">DUBLADO</div>
-              <div className="">SALA 2</div>
-            </div>
-            <div className="flex-col p-2 flex justify-center items-center h-1/4 w-1/3 md:w-1/8 bg-[#080808] rounded-lg hover:bg-[#6b6b6b]">
-              <div className="text-lg font-bold">Quinta</div>
-              <div className="">21:00</div>
-            </div>
-          </div>
+          {Object.keys(
+            Object.groupBy(
+              sessoesAgrupadas[selectedDay],
+              (sessao) => sessao.sala,
+            ),
+          ).map((sala, i) => {
+            const salas = Object.groupBy(
+              sessoesAgrupadas[selectedDay],
+              (sessao) => sessao.sala,
+            )[sala];
+            return (
+              <div key={i} className="flex-col mb-2">
+                <div className="flex gap-2 text-sm text-[#b8b8b8] py-1">
+                  {salas[0].categoriasVideo.video.map((video, i) => {
+                    return (
+                      <div key={i} className="">
+                        {video}
+                      </div>
+                    );
+                  })}
+
+                  {salas[0].categoriasVideo.audio.map((audio, i) => {
+                    return (
+                      <div key={i} className="">
+                        {audio}
+                      </div>
+                    );
+                  })}
+
+                  <div className="">{salas[0].sala}</div>
+                </div>
+                <div className="flex-row flex gap-2">
+                  {salas.map((session, i) => {
+                    return (
+                      <a
+                        key={i}
+                        href={session.link}
+                        target="_blank"
+                        className="flex-col flex justify-center items-center h-1/4 w-1/3 md:w-1/8 bg-[#080808] rounded-lg hover:bg-[#6b6b6b] p-1 border-[#4a4a4a] border-2"
+                      >
+                        <div className="text-lg font-bold">
+                          {session.diaSemana.toLocaleLowerCase()}
+                        </div>
+                        <div className="">{session.sessao}</div>
+                      </a>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

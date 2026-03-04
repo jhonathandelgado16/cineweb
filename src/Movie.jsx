@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import NavBar from './components/NavBar/NavBar';
 import HeaderMovie from './components/Movie/HeaderMovie';
 import Section from './components/Section';
@@ -14,10 +14,21 @@ const movies = [
 ];
 
 const Movie = () => {
+  const componentRef = useRef(null);
+
+  useEffect(() => {
+    if (componentRef.current) {
+      componentRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+      });
+    }
+  }, [componentRef]);
+
   return (
     <>
       <HeaderMovie title="INTERESTELAR" img="/images/bigcarousel/1.jpg" />
-      <MovieSection />
+      <MovieSection ref={componentRef} />
       <Section title="EM CARTAZ" movies={movies} />
     </>
   );
