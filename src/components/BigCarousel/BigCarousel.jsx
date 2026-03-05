@@ -30,8 +30,8 @@ const BigCarousel = ({ children }) => {
   if (itemCount === 0) return null;
 
   return (
-    <div className="h-full flex-row items-center justify-center p-4 mx-auto">
-      <div className="relative w-full max-w-6xl h-96 overflow-hidden mx-auto mb-6">
+    <div className="h-full flex-row items-center justify-center px-4 mx-auto">
+      <div className="relative w-full max-w-7xl h-96 overflow-hidden mx-auto mb-6">
         <div className="flex h-full">
           <div className="w-full lg:w-full relative flex items-center justify-end overflow-hidden">
             {/* Carousel images */}

@@ -5,7 +5,7 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="md:flex-col w-full max-w-6xl items-center justify-center md:h-35 text-white py-2 md:py-4 mx-auto bg-[#131313] md:bg-transparent">
+    <div className="md:flex-col w-full max-w-7xl items-center justify-center md:h-35 text-white py-2 md:py-4 mx-auto bg-[#131313] md:bg-transparent">
       <div className="absolute left-0 flex items-center justify-center h-15 pl-4">
         <button
           className="md:hidden text-white focus:outline-none"

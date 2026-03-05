@@ -78,9 +78,9 @@ const MovieSection = (props) => {
       ref={props.ref}
       className="md:h-140 flex-row items-center justify-center px-4 mx-auto"
     >
-      <div className="w-full max-w-6xl mx-auto mb-2 md:mb-6 bg-[#0d0d0d]/90 p-4 rounded-lg h-full text-white">
+      <div className="w-full max-w-7xl mx-auto mb-2 md:mb-6 bg-[#0d0d0d]/90 p-4 rounded-lg h-full text-white">
         <div className="h-1/5">
-          <div className="font-extrabold pb-2 text-xl">Sessões</div>
+          <div className="font-extrabold pb-2 text-md">Sessões</div>
           <div className="flex overflow-x-auto scroll-smooth scrollbar-hide">
             {Object.keys(sessoesAgrupadas).map((diaSemana) => {
               const sessoesDoDia = sessoesAgrupadas[diaSemana];
@@ -98,7 +98,7 @@ const MovieSection = (props) => {
           </div>
         </div>
         <div className="flex-col h-4/5 overflow-y-auto scroll-smooth p-2 custom-scrollbar">
-          <div className="font-bold py-1">
+          <div className="font-bold py-1 text-sm">
             {'Sessões de '}
             {sessoesAgrupadas[selectedDay][0].diaSemana}
             {', '}
@@ -117,7 +117,7 @@ const MovieSection = (props) => {
             )[sala];
             return (
               <div key={i} className="flex-col mb-2">
-                <div className="flex gap-2 text-sm text-[#b8b8b8] py-1">
+                <div className="flex gap-2 text-xs text-[#b8b8b8] py-1">
                   {salas[0].categoriasVideo.video.map((video, i) => {
                     return (
                       <div key={i} className="">
@@ -143,9 +143,9 @@ const MovieSection = (props) => {
                         key={i}
                         href={session.link}
                         target="_blank"
-                        className="flex-col flex justify-center items-center h-1/4 w-1/3 md:w-1/8 bg-[#080808] rounded-lg hover:bg-[#6b6b6b] p-1 border-[#4a4a4a] border-2"
+                        className="flex-col flex justify-center items-center h-1/4 w-1/3 md:w-1/8 bg-[#d00000]/70 rounded-lg hover:bg-[#d00000] p-1 hover:cursor-pointer transition-colors duration-300 "
                       >
-                        <div className="text-lg font-bold">
+                        <div className="text-md font-bold">
                           {session.diaSemana.toLocaleLowerCase()}
                         </div>
                         <div className="">{session.sessao}</div>

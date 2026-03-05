@@ -4,7 +4,7 @@ import ContentRating from '../ContentRating';
 const HeaderMovie = (props) => {
   return (
     <div className="h-full flex-row items-center justify-center pt-4 px-4 md:p-4 mx-auto">
-      <div className="relative w-full max-w-6xl h-50 md:h-80 mx-auto mb-2 md:mb-6">
+      <div className="relative w-full max-w-7xl h-50 md:h-80 mx-auto mb-2 md:mb-4">
         <div className="h-full">
           <img
             className="h-full w-full rounded-lg object-cover"
@@ -24,7 +24,7 @@ const HeaderMovie = (props) => {
           </div>
         </div>
       </div>
-      <div className="flex-col md:flex-row flex w-full max-w-6xl mx-auto gap-2 text-md">
+      <div className="flex-col md:flex-row flex w-full max-w-7xl mx-auto gap-2 text-md">
         <div className="w-full md:w-2/3 text-white font-light text-justify bg-[#0d0d0d]/90 p-4 rounded-lg hidden md:block">
           <div className="font-extrabold pb-2 text-xl">Resumo</div>
           <div className="text-[#b8b8b8]">
