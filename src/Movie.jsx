@@ -1,8 +1,9 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import NavBar from './components/NavBar/NavBar';
 import HeaderMovie from './components/Movie/HeaderMovie';
 import Section from './components/Section';
 import MovieSection from './components/MovieSection/MovieSection';
+import Details from './components/Movie/Details';
 
 const movies = [
   { title: 'INTERESTELAR', img: '/images/poster.jpg', rating: '18' },
@@ -14,21 +15,10 @@ const movies = [
 ];
 
 const Movie = () => {
-  const componentRef = useRef(null);
-
-  useEffect(() => {
-    if (componentRef.current) {
-      componentRef.current.scrollIntoView({
-        behavior: 'smooth',
-        block: 'nearest',
-      });
-    }
-  }, [componentRef]);
-
   return (
     <>
       <HeaderMovie title="INTERESTELAR" img="/images/bigcarousel/1.jpg" />
-      <MovieSection ref={componentRef} />
+      <Details movie={movies[0]} />
       <Section title="EM CARTAZ" movies={movies} />
     </>
   );

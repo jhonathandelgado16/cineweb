@@ -17,18 +17,18 @@ const CardMovie = ({
 
   return (
     <div
-      className="h-full w-7/10 md:w-full mx-auto shadow-lg hover:outline-2 hover:outline-offset-2 hover:outline-gray-200 rounded-lg cursor-pointer"
+      className="h-80 md:h-full w-full md:w-full mx-auto shadow-lg hover:outline-2 hover:outline-offset-2 hover:outline-gray-200 rounded-lg cursor-pointer"
       onClick={handleClick}
     >
-      <div className="h-3/4 bg-[#131313] rounded-t-lg">
+      <div className="h-3/4 bg-[#202020] rounded-t-lg">
         <img
           className="h-full w-full rounded-t-lg object-cover"
           src={imgSrc}
           alt={title}
         />
       </div>
-      <div className="h-1/4 bg-[#131313] rounded-b-lg flex flex-col justify-center p-2">
-        <div className="text-white w-full text-lg truncate font-semibold">
+      <div className="h-1/4 bg-[#202020] rounded-b-lg flex flex-col justify-center p-2">
+        <div className="text-white w-full text-sm md:text-lg truncate font-semibold">
           {title}
         </div>
         <div className="w-full flex justify-between items-center mt-2">

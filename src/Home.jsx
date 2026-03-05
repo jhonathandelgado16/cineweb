@@ -13,7 +13,7 @@ const movies = [
   { title: 'TENET', img: '/images/poster3.jpg', rating: '14' },
   { title: 'DUNE', img: '/images/poster4.jpg', rating: '12' },
   { title: 'MATRIX', img: '/images/poster5.jpg', rating: '10' },
-  { title: 'AVATAR', img: '/images/poster6.jpg', rating: 'L' },
+  { title: 'AVATAR - FOGO E CINZAS', img: '/images/poster6.jpg', rating: 'L' },
 ];
 
 const bigMovies = [

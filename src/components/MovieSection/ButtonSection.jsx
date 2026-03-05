@@ -7,7 +7,7 @@ const ButtonSection = ({
   alterSelected,
   selectedButton = '',
 }) => {
-  const [selectedDay, setSelectedDay] = useState(selected);
+  const [selectedDay, setSelectedDay] = useState(selected ? dayOfWeek : '');
 
   const handleClick = () => {
     alterSelected(dayOfWeek);
@@ -15,12 +15,14 @@ const ButtonSection = ({
   };
 
   return (
-    <div className="flex-shrink-0 p-1 w-1/3 md:w-1/3 lg:w-1/7">
+    <div className="flex-shrink-0 w-1/3 md:w-1/3 lg:w-1/5">
       <div
         onClick={handleClick}
-        className={`h-full hover:bg-[#080808] rounded-lg flex flex-col justify-center items-center align-center hover:cursor-pointer border-1 hover:border-white p-1 ${selectedDay == selectedButton ? 'bg-[#080808] border-[#d00]' : 'bg-[#131313] border-[#7a7a7a]'}`}
+        className={`h-full text-md hover:bg-[#030303] flex flex-col justify-center items-center align-center hover:cursor-pointer hover:border-white p-2 ${selectedDay == selectedButton ? 'bg-[#030303]' : 'bg-[#404040]'}`}
       >
-        <div className="font-extrabold text-sm md:text-sm">{dayOfWeek}</div>
+        <div className="font-extrabold text-sm md:text-sm mb-2">
+          {dayOfWeek}
+        </div>
         <div className="text-md">{day}</div>
       </div>
     </div>
