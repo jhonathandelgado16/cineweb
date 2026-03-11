@@ -115,8 +115,8 @@ const MovieSection = (props) => {
       className="md:h-140 flex-row items-center justify-center mx-auto"
     >
       <div className="w-full max-w-7xl mx-auto mb-2 md:mb-6 p-4 md:p-2 rounded-3xl h-full text-white">
-        <div className="h-1/5 ">
-          <div className="font-extrabold text-3xl pb-2">Horários</div>
+        <div className="h-1/5 md:mb-6">
+          <div className="font-extrabold text-3xl pb-2 md:pb-4">Horários</div>
           <div className="flex overflow-x-auto scroll-smooth custom-scrollbar rounded-lg mb-2 pb-2 md:pb-1 gap-0.5">
             {Object.keys(sessoesAgrupadas).map((diaSemana) => {
               const sessoesDoDia = sessoesAgrupadas[diaSemana];

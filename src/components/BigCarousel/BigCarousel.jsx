@@ -31,7 +31,7 @@ const BigCarousel = ({ children }) => {
 
   return (
     <div className="h-full flex-row items-center justify-center px-6 mx-auto">
-      <div className="relative w-full max-w-7xl h-70 md:h-96 overflow-hidden mx-auto mb-6">
+      <div className="relative w-full max-w-7xl h-70 md:h-120 overflow-hidden mx-auto mb-6">
         <div className="flex h-full">
           <div className="w-full lg:w-full relative flex items-center justify-end overflow-hidden">
             <div className="absolute inset-0 flex items-center justify-center">
@@ -57,7 +57,7 @@ const BigCarousel = ({ children }) => {
           onMouseEnter={() => setIsAutoPlay(false)}
           onMouseLeave={() => setIsAutoPlay(true)}
           aria-label="previous"
-          className="h-8 absolute left-0 bottom-0 z-20 bg-gray-700 transition-all duration-300 opacity-70 text-white px-2 rounded-md hover:opacity-100 text-2xl font-bold hover:bg-gray-800"
+          className="h-8 absolute left-0 bottom-0 z-10 bg-gray-700 transition-all duration-300 opacity-70 text-white px-2 rounded-md hover:opacity-100 text-2xl font-bold hover:bg-gray-800"
         >
           ‹
         </button>
@@ -67,13 +67,13 @@ const BigCarousel = ({ children }) => {
           onMouseEnter={() => setIsAutoPlay(false)}
           onMouseLeave={() => setIsAutoPlay(true)}
           aria-label="next"
-          className="h-8 absolute right-0 bottom-0 z-20 bg-gray-700 transition-all duration-300 opacity-70 text-white px-2 rounded-md hover:opacity-100 text-2xl font-bold hover:bg-gray-800"
+          className="h-8 absolute right-0 bottom-0 z-10 bg-gray-700 transition-all duration-300 opacity-70 text-white px-2 rounded-md hover:opacity-100 text-2xl font-bold hover:bg-gray-800"
         >
           ›
         </button>
 
         {/* Dot Indicators */}
-        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-20 flex gap-2">
+        <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 z-10 flex gap-2">
           {itemsArray.map((_, index) => (
             <button
               key={index}

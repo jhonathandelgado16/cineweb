@@ -4,8 +4,8 @@ import MovieSection from '../MovieSection/MovieSection';
 const Details = (props) => {
   return (
     <div className="flex-col md:flex-row flex w-full max-w-7xl mx-auto text-md md:p-2 md:gap-10">
-      <div className="flex-col w-1/3 h-full">
-        <div className="w-full text-white font-light text-justify p-4 md:p-2 hidden md:block">
+      <div className="flex-col w-full md:w-1/3 h-full">
+        <div className="w-full text-white font-light text-justify p-4 md:p-2 md:block">
           <div className="text-[#b8b8b8] border-b-1 border-white/20 pb-2 mb-2">
             {props.movie.description ||
               'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'}

@@ -5,11 +5,11 @@ const LinkBar = () => {
   return (
     <div className="justify-center gap-2 md:gap-4 flex flex-col md:flex-row p-4 md:p-0">
       <LinkButton textLink={'PROGRAMAÇÃO'} />
-      <LinkButton textLink={'CARDÁPIO'} />
+      <LinkButton textLink={'CARDÁPIO'} path="menu" />
       <LinkButton textLink={'CINEMAS'} />
-      <LinkButton textLink={'PARCERIAS'} />
-      <LinkButton textLink={'LOCALIZAÇÃO'} />
       <LinkButton textLink={'CONTATO'} />
+      <LinkButton textLink={'LOCALIZAÇÃO'} />
+      <LinkButton textLink={'PARCERIAS'} />
     </div>
   );
 };

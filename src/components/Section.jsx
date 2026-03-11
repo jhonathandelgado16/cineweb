@@ -18,6 +18,8 @@ const Section = (props) => {
             <Carousel>
               {props.movies.map((m, i) => (
                 <CardMovie
+                  id={i}
+                  movie={m}
                   key={i}
                   title={m.title}
                   imgSrc={m.img}
