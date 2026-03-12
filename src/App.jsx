@@ -3,6 +3,8 @@ import Home from './Home';
 import Movie from './Movie';
 import NavBar from './components/NavBar/NavBar';
 import ScrollToTop from './ScrollToTop';
+import Footer from './components/Footer/Footer';
+import Menu from './Menu';
 
 const App = () => {
   return (
@@ -11,8 +13,10 @@ const App = () => {
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="filme" element={<Movie />} />
+        <Route path="/details/:filme" element={<Movie />} />
+        <Route path="/menu" element={<Menu />} />
       </Routes>
+      <Footer />
     </BrowserRouter>
   );
 };

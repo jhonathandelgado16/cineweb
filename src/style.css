@@ -3,8 +3,9 @@
 
 body {
   background-color: #131313;
-  font-family: 'Inter', sans-serif;
-  background-image: url('/assets/bg.png');
+  font-family:
+    'Inter', sans-serif; /* 
+  background-image: url('/assets/bg.png'); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -18,16 +19,17 @@ button {
 
 /* Custom Scrollbar Styling (WebKit only) */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 8px; /* width of the entire scrollbar */
+  width: 6px; /* width of the entire scrollbar */
+  height: 6px; /* height of the horizontal scrollbar */
 }
 
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: none; /* color of the track */
+  background: #222; /* color of the track */
   border-radius: 10px;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: #d00; /* color of the scroll thumb */
+  background: #d00000; /* color of the scroll thumb */
   border-radius: 10px;
   opacity: 0.5; /* make the thumb semi-transparent */
 }
