@@ -6,7 +6,7 @@ import NavBar from './components/NavBar/NavBar';
 import BigCarousel from './components/BigCarousel/BigCarousel';
 import Button from './components/Button';
 import Card from './components/BigCarousel/Card';
-import ComingSoon from './ComingSoon';
+import ComingSoon from './components/Soon/ComingSoon';
 
 const movies = [
   {

@@ -1,11 +1,11 @@
 import React from 'react';
-import CardMovie from './components/CardMovie';
-import Carousel from './components/Carousel';
-import Section from './components/Section';
-import NavBar from './components/NavBar/NavBar';
-import BigCarousel from './components/BigCarousel/BigCarousel';
-import Button from './components/Button';
-import Card from './components/BigCarousel/Card';
+import CardMovie from '../CardMovie';
+import Carousel from '../Carousel';
+import Section from '../Section';
+import NavBar from '../NavBar/NavBar';
+import BigCarousel from '../BigCarousel/BigCarousel';
+import Button from '../Button';
+import Card from '../BigCarousel/Card';
 
 const moviesSoon = [
   {
