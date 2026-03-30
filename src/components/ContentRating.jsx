@@ -12,7 +12,7 @@ const ContentRating = (props) => {
 
   return (
     <div
-      className={`${contentRatingColors[props.contentRating]} text-white p-1 w-[30px] h-[30px] text-center text-sm font-bold rounded-sm flex items-center justify-center`}
+      className={`${contentRatingColors[props.contentRating]} text-white p-1 w-[20px] md:w-[30px] h-[20px] md:h-[30px] text-center text-sm font-bold rounded-sm flex items-center justify-center`}
     >
       {props.contentRating}
     </div>

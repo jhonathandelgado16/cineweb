@@ -5,6 +5,7 @@ import NavBar from './components/NavBar/NavBar';
 import ScrollToTop from './ScrollToTop';
 import Footer from './components/Footer/Footer';
 import Menu from './Menu';
+import ComingSoon from './ComingSoon';
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/details/:filme" element={<Movie />} />
         <Route path="/menu" element={<Menu />} />
+        <Route path="/em-breve" element={<ComingSoon />} />
       </Routes>
       <Footer />
     </BrowserRouter>

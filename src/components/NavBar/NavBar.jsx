@@ -55,12 +55,18 @@ const NavBar = () => {
             <LinkButton
               menuOpen={menuOpen}
               setMenuOpen={setMenuOpen}
-              textLink={'PROGRAMAÇÃO'}
+              textLink={'HOME'}
             />
             <LinkButton
               menuOpen={menuOpen}
               setMenuOpen={setMenuOpen}
-              textLink={'CARDÁPIO'}
+              textLink={'EM BREVE'}
+              path="em-breve"
+            />
+            <LinkButton
+              menuOpen={menuOpen}
+              setMenuOpen={setMenuOpen}
+              textLink={'BOMBONIERE'}
               path="menu"
             />
             <LinkButton
@@ -72,6 +78,11 @@ const NavBar = () => {
               menuOpen={menuOpen}
               setMenuOpen={setMenuOpen}
               textLink={'CONTATO'}
+            />
+            <LinkButton
+              menuOpen={menuOpen}
+              setMenuOpen={setMenuOpen}
+              textLink={'SOBRE'}
             />
             <LinkButton
               menuOpen={menuOpen}

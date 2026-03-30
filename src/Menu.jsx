@@ -3,7 +3,7 @@ import React from 'react';
 const Menu = () => {
   return (
     <>
-      <div className="h-full flex-row items-center justify-center pt-4 px-4 md:p-4 mx-auto max-w-7xl">
+      <div className="flex-row items-center justify-center pt-4 px-4 md:p-4 mx-auto max-w-7xl">
         <div className="w-full h-50 md:h-120 mx-auto mb-2 md:mb-8">
           <div className="h-full">
             <img
@@ -12,9 +12,11 @@ const Menu = () => {
             />
           </div>
         </div>
-        <div className="font-extrabold text-3xl text-white mb-4">COMBOS</div>
-        <div className="flex w-full h-50 md:h-95 mx-auto mb-2 md:mb-4 gap-2 font-extrabold ">
-          <div className="relative w-1/4 h-full rounded-lg hover:outline-2 hover:outline-offset-2 hover:outline-gray-200 cursor-pointer">
+        <div className="font-extrabold text-2xl md:text-3xl text-white mb-4">
+          COMBOS
+        </div>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-2 w-full h-full mb-2 md:mb-4 font-extrabold md:gap-2 ">
+          <div className="h-50 md:h-93 rounded-lg hover:outline-2 hover:outline-offset-2 hover:outline-gray-200 cursor-pointer">
             <div
               className=" h-full
              bg-[#e8dac5] rounded-lg"
@@ -26,7 +28,7 @@ const Menu = () => {
               />
             </div>
           </div>
-          <div className="relative w-1/4 h-full rounded-lg hover:outline-2 hover:outline-offset-2 hover:outline-gray-200 cursor-pointer">
+          <div className="h-50 md:h-93 rounded-lg hover:outline-2 hover:outline-offset-2 hover:outline-gray-200 cursor-pointer">
             <div
               className=" h-full
              bg-[#e8dac5] rounded-lg"
@@ -38,7 +40,7 @@ const Menu = () => {
               />
             </div>
           </div>
-          <div className="relative w-1/4 h-full rounded-lg hover:outline-2 hover:outline-offset-2 hover:outline-gray-200 cursor-pointer">
+          <div className="h-50 md:h-93 rounded-lg hover:outline-2 hover:outline-offset-2 hover:outline-gray-200 cursor-pointer">
             <div
               className=" h-full
              bg-[#e8dac5] rounded-lg"
@@ -50,7 +52,7 @@ const Menu = () => {
               />
             </div>
           </div>
-          <div className="relative w-1/4 h-full rounded-lg hover:outline-2 hover:outline-offset-2 hover:outline-gray-200 cursor-pointer">
+          <div className="h-50 md:h-93 rounded-lg hover:outline-2 hover:outline-offset-2 hover:outline-gray-200 cursor-pointer">
             <div
               className=" h-full
              bg-[#e8dac5] rounded-lg"
