@@ -4,11 +4,16 @@ import LinkButton from './LinkButton';
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const BASE = './';
 
   return (
     <div className="md:flex-col w-full max-w-7xl items-center justify-center md:h-35 text-white py-2 md:py-4 mx-auto bg-[#131313] md:bg-transparent mb-12 sm:mb-0">
       <div className="hidden md:flex justify-center md:justify-between h-15 md:mb-4 px-2">
-        <img className="object-contain" src={'/assets/logo.png'} alt={'Home'} />
+        <img
+          className="object-contain"
+          src={`${BASE}assets/logo.png`}
+          alt={'Home'}
+        />
       </div>
       <div className="hidden md:flex justify-between">
         <LinkBar />
@@ -40,7 +45,7 @@ const NavBar = () => {
             <div className="flex md:hidden justify-center md:justify-between h-10 md:mb-4 px-2">
               <img
                 className="object-contain"
-                src={'/assets/logo.png'}
+                src={`${BASE}assets/logo.png`}
                 alt={'Home'}
               />
             </div>

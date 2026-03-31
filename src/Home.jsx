@@ -8,11 +8,12 @@ import Button from './components/Button';
 import Card from './components/BigCarousel/Card';
 import ComingSoon from './components/Soon/ComingSoon';
 
+const BASE = './';
 const movies = [
   {
     title: 'Super Mario Galaxy: O Filme',
     big_img: '/images/bigcarousel/mario.webp',
-    img: '/images/mario.webp',
+    img: `${BASE}images/mario.webp`,
     description:
       'Uma nova aventura leva Mario a enfrentar um inédito e ameaçador super vilão. Em Super Mario Galaxy: O Filme, o bigodudo encanador italiano e seus aliados embarcam numa aventura galáctica repleta de ação e momentos emocionantes depois de salvar o Reino dos Cogumelos.',
     genre: 'Animação, Aventura, Ação, Família, Fantasia',
@@ -32,7 +33,7 @@ const movies = [
     rating: '18',
   },
   {
-    title: 'Crespúsculo',
+    title: 'Crepúsculo',
     big_img: '/images/bigcarousel/crepusculo.webp',
     img: '/images/crepusculo.webp',
     description:

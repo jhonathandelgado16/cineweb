@@ -33,7 +33,7 @@ const Movie = () => {
       rating: '18',
     },
     {
-      title: 'Crespúsculo',
+      title: 'Crepúsculo',
       big_img: '/images/bigcarousel/crepusculo.webp',
       img: '/images/crepusculo.webp',
       description:

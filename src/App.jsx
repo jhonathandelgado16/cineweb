@@ -9,7 +9,7 @@ import SoonPage from './components/Soon/SoonPage';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/CineXV_Website/">
       <ScrollToTop />
       <NavBar />
       <Routes>
