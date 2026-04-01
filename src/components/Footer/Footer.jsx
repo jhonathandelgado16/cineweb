@@ -1,6 +1,8 @@
 import React from 'react';
 
 const Footer = () => {
+  const BASE = './';
+
   return (
     <div className="flex justify-center mt-20 max-w-7xl mx-auto">
       <footer className="text-center text-white text-left w-full">
@@ -39,7 +41,7 @@ const Footer = () => {
               <div className="flex justify-center h-full md:mb-4 px-2 items-center">
                 <img
                   className="object-contain h-15 md:h-25"
-                  src={'/assets/logo.png'}
+                  src={`${BASE}assets/logo.png`}
                   alt={'Home'}
                 />
               </div>

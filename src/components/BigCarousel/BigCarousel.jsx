@@ -38,9 +38,8 @@ const BigCarousel = ({ children }) => {
               {itemsArray.map((item, index) => (
                 <div
                   key={index}
-                  className={`absolute inset-0 transition-opacity duration-700 ${
-                    index === currentIndex ? 'opacity-100' : 'opacity-0'
-                  }`}
+                  className={`absolute inset-0 transition-opacity duration-700`}
+                  style={{ display: index === currentIndex ? 'block' : 'none' }}
                 >
                   <div className="h-full w-full flex items-center justify-center">
                     {item}

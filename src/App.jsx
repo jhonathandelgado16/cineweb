@@ -6,10 +6,11 @@ import ScrollToTop from './ScrollToTop';
 import Footer from './components/Footer/Footer';
 import Menu from './Menu';
 import SoonPage from './components/Soon/SoonPage';
+import AboutUs from './pages/AboutUs';
 
 const App = () => {
   return (
-    <BrowserRouter basename="/CineXV_Website/">
+    <BrowserRouter basename="/cineweb/">
       <ScrollToTop />
       <NavBar />
       <Routes>
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/details/:filme" element={<Movie />} />
         <Route path="/menu" element={<Menu />} />
         <Route path="/em-breve" element={<SoonPage />} />
+        <Route path="/sobre-nos" element={<AboutUs />} />
       </Routes>
       <Footer />
     </BrowserRouter>

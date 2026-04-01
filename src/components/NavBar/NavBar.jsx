@@ -16,7 +16,51 @@ const NavBar = () => {
         />
       </div>
       <div className="hidden md:flex justify-between">
-        <LinkBar />
+        <div className="justify-center gap-2 md:gap-4 flex flex-col md:flex-row p-4 md:p-0">
+          <LinkButton
+            menuOpen={menuOpen}
+            setMenuOpen={setMenuOpen}
+            textLink={'HOME'}
+          />
+          <LinkButton
+            menuOpen={menuOpen}
+            setMenuOpen={setMenuOpen}
+            textLink={'EM BREVE'}
+            path="em-breve"
+          />
+          <LinkButton
+            menuOpen={menuOpen}
+            setMenuOpen={setMenuOpen}
+            textLink={'BOMBONIERE'}
+            path="menu"
+          />
+          <LinkButton
+            menuOpen={menuOpen}
+            setMenuOpen={setMenuOpen}
+            textLink={'CINEMAS'}
+          />
+          <LinkButton
+            menuOpen={menuOpen}
+            setMenuOpen={setMenuOpen}
+            textLink={'CONTATO'}
+          />
+          <LinkButton
+            menuOpen={menuOpen}
+            setMenuOpen={setMenuOpen}
+            textLink={'SOBRE'}
+            path="sobre-nos"
+          />
+          <LinkButton
+            menuOpen={menuOpen}
+            setMenuOpen={setMenuOpen}
+            textLink={'LOCALIZAÇÃO'}
+          />
+          <LinkButton
+            menuOpen={menuOpen}
+            setMenuOpen={setMenuOpen}
+            textLink={'PARCERIAS'}
+          />
+        </div>
       </div>
       <div>
         <div className="fixed sm:hidden top-0 grid grid-cols-5 items-center h-15 bg-[#131313] w-full z-30">
@@ -88,6 +132,7 @@ const NavBar = () => {
               menuOpen={menuOpen}
               setMenuOpen={setMenuOpen}
               textLink={'SOBRE'}
+              path="sobre-nos"
             />
             <LinkButton
               menuOpen={menuOpen}
