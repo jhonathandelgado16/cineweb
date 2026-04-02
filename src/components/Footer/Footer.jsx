@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const BASE = './';
@@ -22,7 +23,12 @@ const Footer = () => {
               </svg>
             </a>
 
-            <a className="">
+            <a
+              className=""
+              href="https://www.instagram.com/cinexvguarapuava/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-6 w-6"
@@ -51,13 +57,10 @@ const Footer = () => {
                 Programação
               </h6>
               <p className="mb-4">
-                <a className="">Em cartaz</a>
+                <Link to="/">Em cartaz</Link>
               </p>
               <p className="mb-4">
-                <a className="">Em breve</a>
-              </p>
-              <p className="mb-4">
-                <a className="">Pré-vendas</a>
+                <Link to="/em-breve">Em breve</Link>
               </p>
             </div>
             <div className="">
@@ -65,16 +68,10 @@ const Footer = () => {
                 Links úteis
               </h6>
               <p className="mb-4">
-                <a className="">Parcerias</a>
+                <Link to="/projeto-social">Parcerias</Link>
               </p>
               <p className="mb-4">
-                <a className="">Sobre Nós</a>
-              </p>
-              <p className="mb-4">
-                <a className="">Estrutura</a>
-              </p>
-              <p>
-                <a className="">Eventos</a>
+                <Link to="/sobre-nos">Sobre Nós</Link>
               </p>
             </div>
             <div>

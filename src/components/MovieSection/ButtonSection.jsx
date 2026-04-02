@@ -21,7 +21,7 @@ const ButtonSection = ({
         className={`h-full text-md hover:bg-[#030303] flex flex-col justify-center items-center align-center hover:cursor-pointer hover:border-white p-2 ${selectedDay == selectedButton ? 'bg-[#030303]' : 'bg-[#404040]'}`}
       >
         <div className="font-extrabold text-sm md:text-sm mb-2">
-          {dayOfWeek}
+          {dayOfWeek.toUpperCase()}
         </div>
         <div className="text-md">{day}</div>
       </div>

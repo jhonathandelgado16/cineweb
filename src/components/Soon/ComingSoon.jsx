@@ -1,5 +1,6 @@
 import React from 'react';
 import Section from '../Section';
+import SectionSoon from './SectionSoon';
 
 const BASE = './';
 const moviesSoon = [
@@ -63,7 +64,7 @@ const moviesSoon = [
 const ComingSoon = () => {
   return (
     <>
-      <Section title="EM BREVE" movies={moviesSoon} />
+      <SectionSoon title="EM BREVE" movies={moviesSoon} />
     </>
   );
 };
