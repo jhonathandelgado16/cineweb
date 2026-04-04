@@ -37,3 +37,15 @@ button {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   opacity: 0.9; /* color of the scroll thumb on hover */
 }
+
+.courier-prime-regular {
+  font-family: "Courier Prime", monospace !important;
+  font-weight: 400;
+  font-style: normal !important;
+}
+
+.courier-prime-700 {
+  font-family: "Courier Prime", monospace !important;
+  font-weight: 700;
+  font-style: normal !important;
+}
