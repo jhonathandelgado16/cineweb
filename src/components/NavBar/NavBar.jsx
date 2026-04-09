@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import LinkButton from './LinkButton';
 
 const NavBar = () => {
@@ -9,14 +9,16 @@ const NavBar = () => {
 
   return (
     <div className="md:flex-col w-full max-w-7xl items-center justify-center md:h-35 text-white py-2 md:py-4 mx-auto bg-[#131313] md:bg-transparent mb-12 sm:mb-0">
-      <div className="hidden md:flex justify-center md:justify-between h-15 md:mb-4 px-2">
-        <img
-          className="object-contain"
-          src={`${BASE}assets/logo.png`}
-          alt={'Home'}
-          currentPath={pathname}
-        />
-      </div>
+      <Link to={'/'}>
+        <div className="hidden md:flex justify-center md:justify-between h-15 md:mb-4 px-2">
+          <img
+            className="object-contain"
+            src={`${BASE}assets/logo.png`}
+            alt={'Home'}
+            currentPath={pathname}
+          />
+        </div>
+      </Link>
       <div className="hidden md:flex justify-between">
         <div className="justify-center gap-2 md:gap-4 flex flex-col md:flex-row p-4 md:p-0">
           <LinkButton

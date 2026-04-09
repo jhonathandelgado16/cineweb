@@ -1,16 +1,22 @@
 import React from 'react';
 import Button from '../Button';
 import { Link } from 'react-router-dom';
+import ImageWithLoader from '../ImageWithLoader';
 
 const Card = ({ id = '0', movie = {} }) => {
   return (
     <div className="h-full w-full" key={movie.title}>
       <div className="relative h-9/10">
-        <img
+        <ImageWithLoader
+          src={movie.big_img}
+          alt={movie.title}
+          className="h-full w-full rounded-lg object-cover"
+        />
+        {/* <img
           className="h-full w-full rounded-lg object-cover"
           src={movie.big_img}
           alt={movie.title}
-        />
+        /> */}
         <div className="absolute flex-row items-end text-white font-bold w-full bottom-0 bg-gradient-to-t from-[#131313]/100 to-transparent px-2 md:px-6 xl:px-6 lg:px-6 h-20 md:h-30">
           <div className="p-0 text-shadow-lg text-2xl md:text-[60px] truncate lg:text-[60px] xl:text-[60px]">
             {movie.title}

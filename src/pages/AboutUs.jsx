@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import ImageWithLoader from '../components/ImageWithLoader';
 
 const useScrollReveal = (options = {}) => {
   const ref = useRef(null);
@@ -72,9 +73,10 @@ const AboutUs = () => {
           className="reveal-up w-full h-40 md:h-80 mx-auto mb-2 md:mb-8"
         >
           <div className="h-full">
-            <img
-              className="h-full w-full rounded-lg object-cover"
+            <ImageWithLoader
               src={`${BASE}images/about-us/header.jpeg`}
+              alt="Sobre nós"
+              className="h-full w-full rounded-lg object-cover"
             />
           </div>
         </div>
