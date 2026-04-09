@@ -1,9 +1,10 @@
-import LinkBar from './LinkBar';
-import React, { useState } from 'react';
+import { useState } from 'react';
+import { useLocation } from 'react-router-dom';
 import LinkButton from './LinkButton';
 
 const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { pathname } = useLocation();
   const BASE = './';
 
   return (
@@ -13,6 +14,7 @@ const NavBar = () => {
           className="object-contain"
           src={`${BASE}assets/logo.png`}
           alt={'Home'}
+          currentPath={pathname}
         />
       </div>
       <div className="hidden md:flex justify-between">
@@ -21,44 +23,53 @@ const NavBar = () => {
             menuOpen={menuOpen}
             setMenuOpen={setMenuOpen}
             textLink={'HOME'}
+            path="/"
+            currentPath={pathname}
           />
           <LinkButton
             menuOpen={menuOpen}
             setMenuOpen={setMenuOpen}
             textLink={'EM BREVE'}
             path="em-breve"
+            currentPath={pathname}
           />
           <LinkButton
             menuOpen={menuOpen}
             setMenuOpen={setMenuOpen}
             textLink={'BOMBONIERE'}
             path="menu"
+            currentPath={pathname}
           />
-          <LinkButton
+          {/* <LinkButton
             menuOpen={menuOpen}
             setMenuOpen={setMenuOpen}
             textLink={'CINEMAS'}
-          />
-          <LinkButton
+            currentPath={pathname}
+          /> */}
+          {/* <LinkButton
             menuOpen={menuOpen}
             setMenuOpen={setMenuOpen}
             textLink={'CONTATO'}
-          />
+            currentPath={pathname}
+          /> */}
           <LinkButton
             menuOpen={menuOpen}
             setMenuOpen={setMenuOpen}
             textLink={'SOBRE'}
             path="sobre-nos"
+            currentPath={pathname}
           />
-          <LinkButton
+          {/* <LinkButton
             menuOpen={menuOpen}
             setMenuOpen={setMenuOpen}
             textLink={'LOCALIZAÇÃO'}
-          />
+          /> */}
           <LinkButton
             menuOpen={menuOpen}
             setMenuOpen={setMenuOpen}
             textLink={'PARCERIAS'}
+            path="projeto-social"
+            currentPath={pathname}
           />
         </div>
       </div>
@@ -105,44 +116,54 @@ const NavBar = () => {
               menuOpen={menuOpen}
               setMenuOpen={setMenuOpen}
               textLink={'HOME'}
+              path="/"
+              currentPath={pathname}
             />
             <LinkButton
               menuOpen={menuOpen}
               setMenuOpen={setMenuOpen}
               textLink={'EM BREVE'}
               path="em-breve"
+              currentPath={pathname}
             />
             <LinkButton
               menuOpen={menuOpen}
               setMenuOpen={setMenuOpen}
               textLink={'BOMBONIERE'}
               path="menu"
+              currentPath={pathname}
             />
-            <LinkButton
+            {/* <LinkButton
               menuOpen={menuOpen}
               setMenuOpen={setMenuOpen}
               textLink={'CINEMAS'}
-            />
-            <LinkButton
+              currentPath={pathname}
+            /> */}
+            {/* <LinkButton
               menuOpen={menuOpen}
               setMenuOpen={setMenuOpen}
               textLink={'CONTATO'}
-            />
+              currentPath={pathname}
+            /> */}
             <LinkButton
               menuOpen={menuOpen}
               setMenuOpen={setMenuOpen}
               textLink={'SOBRE'}
               path="sobre-nos"
+              currentPath={pathname}
             />
-            <LinkButton
+            {/* <LinkButton
               menuOpen={menuOpen}
               setMenuOpen={setMenuOpen}
               textLink={'LOCALIZAÇÃO'}
-            />
+              currentPath={pathname}
+            /> */}
             <LinkButton
               menuOpen={menuOpen}
               setMenuOpen={setMenuOpen}
               textLink={'PARCERIAS'}
+              path="projeto-social"
+              currentPath={pathname}
             />
           </div>
         </ul>

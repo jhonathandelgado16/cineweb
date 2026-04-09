@@ -70,9 +70,9 @@ const moviesSoon = [
 const SoonPage = () => {
   return (
     <>
-      <div className="flex-col text-white md:flex-row flex w-full max-w-7xl mx-auto text-md mx-4 px-4 md:p-2 md:gap-10 font-extrabold text-3xl">
-        Filmes que estreiam em breve no CINE XV
-      </div>
+      {/* <div className="flex-col text-white md:flex-row flex w-full max-w-7xl mx-auto text-md mx-4 px-4 md:p-2 md:gap-10 font-extrabold text-3xl justify-center mb-4 mt-4">
+        EM BREVE NO CINE XV
+      </div> */}
       {moviesSoon.map((m) => (
         <CardSoon movie={m} />
       ))}

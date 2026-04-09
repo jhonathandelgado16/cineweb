@@ -7,6 +7,7 @@ import Footer from './components/Footer/Footer';
 import Menu from './Menu';
 import SoonPage from './components/Soon/SoonPage';
 import AboutUs from './pages/AboutUs';
+import Project from './pages/Project';
 
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="/menu" element={<Menu />} />
         <Route path="/em-breve" element={<SoonPage />} />
         <Route path="/sobre-nos" element={<AboutUs />} />
+        <Route path="/projeto-social" element={<Project />} />
       </Routes>
       <Footer />
     </BrowserRouter>

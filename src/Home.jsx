@@ -20,6 +20,7 @@ const movies = [
     director: 'Aaron Horvath, Michael Jelenic',
     cast: 'Chris Pratt, Anya Taylor-Joy, Charlie Day',
     rating: 'L',
+    trailerUrl: 'https://www.youtube.com/watch?v=BDyTQmUd_aw',
   },
   {
     title: 'Eles Vão Te Matar',
@@ -31,6 +32,7 @@ const movies = [
     director: 'Kirill Sokolov',
     cast: "Zazie Beetz, Myha'la Herrold, Tom Felton",
     rating: '18',
+    trailerUrl: 'https://www.youtube.com/watch?v=BDyTQmUd_aw',
   },
   {
     title: 'Crepúsculo',
@@ -42,6 +44,7 @@ const movies = [
     director: 'Catherine Hardwicke',
     cast: 'Kristen Stewart, Robert Pattinson, Taylor Lautner',
     rating: '12',
+    trailerUrl: 'https://www.youtube.com/watch?v=BDyTQmUd_aw',
   },
   {
     title: 'Devoradores de Estrelas',
@@ -53,6 +56,7 @@ const movies = [
     director: 'Phil Lord, Christopher Miller',
     cast: 'Ryan Gosling, Sandra Hüller, Milana Vayntrub',
     rating: '14',
+    trailerUrl: 'https://www.youtube.com/watch?v=BDyTQmUd_aw',
   },
   {
     title: 'Pânico 7',
@@ -64,6 +68,7 @@ const movies = [
     director: 'Kevin Williamson',
     cast: 'Neve Campbell, Courteney Cox, Isabel May',
     rating: '18',
+    trailerUrl: 'https://www.youtube.com/watch?v=BDyTQmUd_aw',
   },
   {
     title: 'Uma Segunda Chance',
@@ -75,6 +80,7 @@ const movies = [
     director: 'Vanessa Caswill',
     cast: 'Maika Monroe, Tyriq Withers, Rudy Pankow',
     rating: '16',
+    trailerUrl: 'https://www.youtube.com/watch?v=BDyTQmUd_aw',
   },
   {
     title: 'Cara de Um, Focinho de Outro',
@@ -86,6 +92,7 @@ const movies = [
     director: 'Daniel Chong',
     cast: 'Piper Curda, Bobby Moynihan, Melissa Villaseñor',
     rating: 'L',
+    trailerUrl: 'https://www.youtube.com/watch?v=BDyTQmUd_aw',
   },
 ];
 

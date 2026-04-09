@@ -176,7 +176,7 @@ const MovieSection = (props) => {
                         className="flex-col flex justify-center items-center w-1/3 md:w-1/5 bg-[#d00000]/70 rounded-lg hover:bg-[#d00000] p-1 hover:cursor-pointer transition-colors duration-300 py-2"
                       >
                         <div className="text-md font-extrabold">
-                          {session.diaSemana.toLocaleLowerCase()}
+                          {session.diaSemana.toUpperCase()}
                         </div>
                         <div className="text-lg font-extrabold">
                           {session.sessao}
@@ -232,7 +232,7 @@ const MovieSection = (props) => {
                         className="flex-col flex justify-center items-center w-1/3 md:w-1/5 bg-[#d00000]/70 rounded-lg hover:bg-[#d00000] p-1 hover:cursor-pointer transition-colors duration-300 py-2"
                       >
                         <div className="text-md font-extrabold">
-                          {session.diaSemana.toLocaleLowerCase()}
+                          {session.diaSemana.toUpperCase()}
                         </div>
                         <div className="text-lg font-extrabold">
                           {session.sessao}
