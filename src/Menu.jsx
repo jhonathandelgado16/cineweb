@@ -13,9 +13,15 @@ const Menu = () => {
             />
           </div>
         </div>
-        <div className="flex md:flex-row justify-center text-white font-bold inset-x-0 bottom-0 bg-gradient-to-t from-[#0d0d0d]/100 to-transparent pb-4 px-2 md:px-6 rounded-b-lg">
-          <div className="text-shadow-lg text-xl md:text-[40px]">
-            BOMBONIERE CINE XV
+        <div className="flex md:flex-row justify-center text-white font-light inset-x-0 bottom-0 bg-gradient-to-t from-[#0d0d0d]/100 to-transparent pb-4 px-2 md:px-6 rounded-b-lg">
+          <div className="text-shadow-lg text-xs md:text-lg text-justify">
+            A bomboniere do CINE XV foi pensada para transformar cada sessão em
+            uma experiência completa. Com um ambiente acolhedor e moderno,
+            oferece uma variedade de opções que agradam a todos os gostos —
+            desde a clássica pipoca quentinha e crocante até doces, chocolates,
+            bebidas geladas e combos especiais. Tudo preparado com qualidade e
+            praticidade, para que o público possa aproveitar ao máximo cada
+            momento no cinema. No CINE XV, o sabor faz parte do espetáculo.
           </div>
         </div>
         <div className="font-light text-xl md:text-xl text-white text-justify mb-6"></div>
