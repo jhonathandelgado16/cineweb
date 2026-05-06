@@ -4,7 +4,7 @@ const NavBar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-blue-600 px-4 py-2 flex items-center justify-between">
+    <nav className="bg-blue-600 px-4 py-2 flex items-center justify-between ">
       {/* Logo */}
       <div className="text-white text-xl font-bold">Logo</div>
 

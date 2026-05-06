@@ -3,14 +3,14 @@
 
 body {
   background-color: #131313;
-  font-family:
-    'Inter', sans-serif; /* 
-  background-image: url('/assets/bg.png'); */
+  font-family: 'Inter', sans-serif;
+  background-image: url('/assets/fundo.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   /* Optional: keeps background fixed during scroll for a "parallax" effect */
   background-attachment: fixed;
+  overflow-x: hidden;
 }
 
 button {
@@ -48,6 +48,12 @@ button {
   font-family: 'Courier Prime', monospace !important;
   font-weight: 700;
   font-style: normal !important;
+}
+
+.spalla {
+  font-family: 'spalla', sans-serif;
+  font-weight: 900;
+  font-style: normal;
 }
 
 img.loaded {
